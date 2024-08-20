@@ -7,7 +7,7 @@ export function execute(command, args, options): Promise<string> {
     shell: boolean;
     cwd?: string;
     env: Record<string, string | undefined>;
-  } = { shell: true, env: { ...process.env } };
+  } = { shell: false, env: { ...process.env } };
   if (options && options.cwd) {
     spawnOptions.cwd = options.cwd;
   }
